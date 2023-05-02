@@ -165,10 +165,10 @@ function header() {
    header_down.append(downWrapper);
    header.append(header__top, header_down);
    console.log(header);
-   wrapper.append(header);
+   wrapper.prepend(header);
 }
 let doc = document;
-let wrapper = doc.querySelector('.wrapper')
+let wrapper = doc.querySelector('.container')
 let item = doc.createElement('div');
 item.classList.add('buy-item');
 let item_top = doc.createElement('div');
