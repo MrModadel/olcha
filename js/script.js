@@ -167,41 +167,45 @@ function header() {
    console.log(header);
    wrapper.prepend(header);
 }
-let doc = document;
-let wrapper = doc.querySelector('.container')
-let item = doc.createElement('div');
-item.classList.add('buy-item');
-let item_top = doc.createElement('div');
-item_top.classList.add('buy-item__top');
-let item_img = doc.createElement('img');
-item_img.src = './img/1VXbCH7l6wAiEIMeNukc20vHMYIsf67lteqdI8Xoc9uYTbHzxzBkkmP3Ku1E.jpg';
-item_img.classList.add('buy-item__top-img');
-item_top.append(item_img);
+function items() {
+   let doc = document;
+   let wrapper = doc.querySelector('.container')
+   let item = doc.createElement('div');
+   item.classList.add('buy-item');
+   let item_top = doc.createElement('div');
+   item_top.classList.add('buy-item__top');
+   let item_img = doc.createElement('img');
+   item_img.src = './img/1VXbCH7l6wAiEIMeNukc20vHMYIsf67lteqdI8Xoc9uYTbHzxzBkkmP3Ku1E.jpg';
+   item_img.classList.add('buy-item__top-img');
+   item_top.append(item_img);
 
-let item_down = doc.createElement('div');
+   let item_down = doc.createElement('div');
 
-let item_title = doc.createElement('div');
-let item_price = doc.createElement('div');
-let item_sup_price = doc.createElement('div');
-let item_box = doc.createElement('div');
-let item_btn_one = doc.createElement('button');
-item_btn_one.classList.add('buy-item__down-btn-cart')
-item_btn_one.innerHTML = '<span class="material-icons">shopping_cart</span>'
-let item_btn_two = doc.createElement('button');
-item_btn_two.classList.add('buy-item__down-btn')
+   let item_title = doc.createElement('div');
+   let item_price = doc.createElement('div');
+   let item_sup_price = doc.createElement('div');
+   let item_box = doc.createElement('div');
+   let item_btn_one = doc.createElement('button');
+   item_btn_one.classList.add('buy-item__down-btn-cart')
+   item_btn_one.innerHTML = '<span class="material-icons">shopping_cart</span>'
+   let item_btn_two = doc.createElement('button');
+   item_btn_two.classList.add('buy-item__down-btn')
 
-item_btn_two.innerHTML ='В рассрочку'
-item_box.classList.add('buy-item__down-btn-box');
-item_down.classList.add('buy-item__down');
-item_title.classList.add('buy-item__down-title');
-item_price.classList.add('buy-item__down-price');
-item_sup_price.classList.add('buy-item__down-sup-price');
-item_title.innerHTML = 'Lorem ipsum dolor sit amet consectetur.';
-item_price.innerHTML = '<span>1000</span>сум';
-item_sup_price.innerHTML = '<span>1000</span>сум X &nbsp;<span class="n"> 6</span>&nbsp; мес';
-item_box.append(item_btn_one, item_btn_two);
-item_down.append(item_title, item_price ,item_sup_price ,item_box)
+   item_btn_two.innerHTML = 'В рассрочку'
+   item_box.classList.add('buy-item__down-btn-box');
+   item_down.classList.add('buy-item__down');
+   item_title.classList.add('buy-item__down-title');
+   item_price.classList.add('buy-item__down-price');
+   item_sup_price.classList.add('buy-item__down-sup-price');
+   item_title.innerHTML = 'Lorem ipsum dolor sit amet consectetur.';
+   item_price.innerHTML = '<span>1000</span>сум';
+   item_sup_price.innerHTML = '<span>1000</span>сум X &nbsp;<span class="n"> 6</span>&nbsp; мес';
+   item_box.append(item_btn_one, item_btn_two);
+   item_down.append(item_title, item_price, item_sup_price, item_box)
 
-item.append(item_top , item_down);
+   item.append(item_top, item_down);
+   wrapper.append(item)
+
+}
+items()
 header()
-wrapper.append(item)
