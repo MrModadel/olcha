@@ -199,7 +199,7 @@ function items() {
    item_sup_price.classList.add('buy-item__down-sup-price');
    item_title.innerHTML = 'Lorem ipsum dolor sit amet consectetur.';
    item_price.innerHTML = '<span>1000</span>сум';
-   item_sup_price.innerHTML = '<span>1000</span>сум X &nbsp;<span class="n"> 6</span>&nbsp; мес';
+   item_sup_price.innerHTML = '<span>1000</span>сум x &nbsp;<span class="n"> 6</span>&nbsp; мес';
    item_box.append(item_btn_one, item_btn_two);
    item_down.append(item_title, item_price, item_sup_price, item_box)
 
